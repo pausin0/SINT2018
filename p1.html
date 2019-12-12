@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Servicio de informacion musical </title>
+  <link href="p1.css" rel="stylesheet" type="text/css" />
+  <script src="p1.js"></script>
+
+
+</head>
+
+<body>
+ <div id="titulo">
+  <h1> Servicio Musical </h1>
+  <p> Haz tu consulta rellenando los siguientes campos </p>
+</div>
+
+  <form id="formulario" onsubmit="return Comprobacion()" >
+
+    <p> Nombre: </p> <input type="text" id="nombre" name="nombre" placeholder="Nombre"/>
+      <p> Email: </p><input type="text"  id="Email" name="Email" placeholder="ejemplo@ejemplo.com" />
+      <h4 class="text"> El email debe ser del tipo ejemplo@ejemplo.com.</h4>
+        <p> Contraseña: </p><input type="password" id="Pass" name="Pass" placeholder="************" />
+          <p> Repite Contraseña:</p> <input type="password" id="Pass1" name="Pass1" placeholder="************" />
+          <h4 class="text"> Las contraseñas deben coincidir </h4>
+          <p> Edad: </p><input type="date" id="Edad" name="Edad"/>
+
+            <p>Telefono:</p> <input type="tel" id="tlf" name="tlf">
+              <h4 class="text"> El numero de telefono debe contener 9 digitos.</h4>
+
+
+            <p> Sexo: </p><select name="sex" id="sex">
+              <option value=" " selected>---</option>
+              <option value="hombre" >Hombre</option>
+              <option value="mujer">Mujer</option>
+
+           </select>
+
+            <h3>Genero musical a buscar:</h3>
+
+              <p>
+
+                  <input type="checkbox" name="genero[]"  value="Bass"> Bass<br>
+                 <input type="checkbox" name="genero[]"  value="Dance"> Dance<br>
+                 <input type="checkbox" name="genero[]"  value="Hip-Hop" > Hip-Hop<br>
+                 <input type="checkbox" name="genero[]"  value="Jazz"> Jazz<br>
+                <input type="checkbox" name="genero[]"  value="Pop"> Pop<br>
+                <input type="checkbox" name="genero[]"  value="Regaetton"> Regaetton<br>
+                <input type="checkbox" name="genero[]"  value="Rock"> Rock<br>
+
+                <input type="checkbox" id="todo" onclick='selectAll(this)' />Seleccionar/Deseleccionar todas<br>
+
+             </p>"checkbox" name="genero[]"  value="Pop"> Pop<br>
+                <input type="checkbox" name="genero[]"  value="Regaetton"> Regaetton<br>
+                <input type="checkbox" name="genero[]"  value="Rock"> Rock<br>
+
+                <input type="checkbox" id="todo" onclick='selectAll(this)' />Seleccionar/Deseleccionar todas<br>
+
+             </p>
+
+
+              <p>Describe a tu artista favorito:
+                <br><textarea name="descripcion" rows="10" cols="30" placeholder="Describe"></textarea></p>
+
+              <p> Enviar imagen de tu instrumento favorito:
+                <br><input type="file" name="imagen" id="imagen" /></p>
+
+                  <p>Selecciona la URL a la que se enviará el formulario:
+                    <br><input type="radio" name="server" id="php" value="p1.php" checked>p1.php
+                    <br><input type="radio" name="server" id="phpinfo" value="phpinfo.php">phpinfo.php
+                   </p>
+
+                  <p>Selecciona el método de envío:
+                    <br><input type="radio" name="metodo" id="metodoGet" value="GET" >GET
+                    <br><input type="radio" name="metodo" id="metodoPost" value="POST" checked>POST
+                  </p>
+
+                   <p>Selecciona la codificación de envío:
+                    <br><input type="radio" name="codificacion" id="urlencoded" value="application/x-www-form-urlencoded" >application/x-www-form-urlencoded
+                    <br><input type="radio" name="codificacion" id="multipart" value="multipart/form-data" checked>multipart/form-data
+                  </p>
+
+
+                  <div id="aceptar">
+                    Acepto los <a href="images/terminos.html">terminos y condiciones de la pagina</a>
+                    <input type="checkbox" name="term" id="term" checked>
+                  </div>
+
+                  <input type="hidden" name="hora" id="hora">
+                  <input type="hidden" name="navegador" id="navegador">
+
+
+                  <p><input type="submit" value="Enviar" >
+                    <input type="reset" value="Resetear"></p>
+
+  </form>
+
+
+</body>
+
+</html>
